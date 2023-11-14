@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <!-- MENU ENCABEZADO -->
+
+    <div class="contenedor-header">
+        <header>
+            <div class="logo">
+                <a href="#">Natanael</a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
+                    <li><a href="#sobremi" onclick="seleccionar()">SOBRE MI</a></li>
+                    <li><a href="#skills" onclick="seleccionar()">SKILLS</a></li>
+                    <li><a href="#curriculum" onclick="seleccionar()">CURRICULUM</a></li>
+                    <li><a href="#portfolio" onclick="seleccionar()">PORTFOLIO</a></li>
+                    <li><a href="#contacto" onclick="seleccionar()">CONTACTO</a></li>
+                </ul>
+            </nav>
+            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+    </div>
+
+    <!-- SECCION INICIO -->
+
+    <section id="inicio" class="inicio">
+        <div class="contenedor-banner">
+            <div class="contenedor-img">
+                <img id="profile-photo" src="data:image/png;base64,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" alt="">
+            </div>
+            <h1>NATANAEL TRAVERSA</h1>
+            <h2>Cursante Programacion Enapsi</h2>
+            <div class="redes">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-skype"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#"><i class="fa-solid fa-rss"></i></a>
+            </div>
+        </div>
+    </section>
+
+<!-- SECCION SOBRE MI -->
+<section id="sobremi" class="sobremi">
+    <div class="contenido-seccion">
+        <h2>Sobre Mi</h2>
+        <p><span>Hola soy Natanael Traversa.</span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam, deleniti natus? Voluptas iure odit pariatur natus vitae fugiat, veritatis obcaecati maxime beatae dignissimos laborum voluptate in vero ipsum iste odio!
+        Assumenda nobis explicabo ea quia! Enim itaque, fugit nihil ipsam minus voluptatum, sapiente consectetur ratione neque fugiat soluta provident porro rem odio repellat cupiditate fuga doloribus, officia esse hic suscipit?
+        Nihil molestiae beatae nulla autem pariatur. Deserunt quasi sequi vitae ratione id itaque obcaecati impedit minus accusamus autem, provident sint facilis, rem dolorum perferendis iure quo repudiandae perspiciatis tempore et.</p>
+        
+        <div class="fila">
+            <!-- datos personales -->
+            <div class="col">
+                <h3>Datos Personales</h3>
+                <ul>
+                    <li>
+                        <strong>Cumpleaños</strong>
+                        13-03-2008
+                    </li>
+                    <li>
+                        <strong>Telefono</strong>
+                        +54 3446 52 6113
+                    </li>
+                    <li>
+                        <strong>Email</strong>
+                        natanaeltraversa@gmail.com
+                    </li>
+                    <li>
+                        <strong>Website</strong>
+                        www.example.com
+                    </li>
+                    <li>
+                        <strong>Direccion</strong>
+                        direccion de mi casa
+                    </li>
+                    <li>
+                        <strong>Cargo</strong>
+                        Esudiante ENAPSI
+                    </li>
+                </ul>
+            </div>
+            <!-- intereses -->
+            <div class="col">
+                <h3>Intereses</h3>
+                <div class="contenedor-intereses">
+                    <div class="interes">
+                        <i class="fa-solid fa-gamepad fa-lg"></i>
+                        <span>JUEGOS</span>
+                    </div>
+                    <div class="interes">
+                        <i class="fa-solid fa-plane fa-lg"></i>
+                        <span>VIAJAR</span>
+                    </div>
+                    <div class="interes">
+                        <i class="fa-brands fa-windows fa-lg"></i>
+                        <span>WINDOWS</span>
+                    </div>
+                    <div class="interes">
+                        <i class="fa-solid fa-earth-americas fa-lg"></i>
+                        <span>GEOGRAFIA</span>
+                    </div>
+                    <div class="interes">
+                        <i class="fa-solid fa-calculator fa-lg"></i>
+                        <span>MATEMATICAS</span>
+                    </div>
+                    <div class="interes">
+                        <i class="fa-solid fa-flask fa-lg"></i>
+                        <span>QUIMICA</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button>
+            Descargar CV<i class="fa-solid fa-download fa-lg"></i>
+            <span class="overlay"></span>
+        </button>
+    </div>
+</section>
+</body>
